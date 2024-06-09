@@ -29,9 +29,6 @@ Aplikasi ini digunakan untuk memonitoring kendaraan di tambang, dengan pengguna 
 7. Jalankan server aplikasi: php artisan serve
 8. Buka browser dan ketik: http://localhost:8000
 
-
-## Cara Pakai Aplikasi
-
 ### Login sebagai Admin
 
 1. Buat data perusahaan
