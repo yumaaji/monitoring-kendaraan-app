@@ -16,6 +16,7 @@ Aplikasi ini digunakan untuk memonitoring kendaraan di tambang, dengan pengguna 
 
 - **Database**: MySQL
 - **PHP Version**: 8.1
+- **Web Server**: XAMPP/Laragon
 - **Laravel Version**: 10
 
 ## Cara Menggunakan Aplikasi
