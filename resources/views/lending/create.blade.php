@@ -44,7 +44,7 @@
                 <i class="fas fa-calendar"></i>
               </div>
             </div>
-            <input type="text" class="form-control datepicker" name="start_date">
+            <input type="date" class="form-control datepicker" name="start_date">
           </div>
         </div>
         <div class="form-group">
@@ -55,7 +55,7 @@
                 <i class="fas fa-calendar"></i>
               </div>
             </div>
-            <input type="text" class="form-control datepicker" name="end_date">
+            <input type="date" class="form-control datepicker" name="end_date">
           </div>
         </div>
         <div class="form-group mb-3">
