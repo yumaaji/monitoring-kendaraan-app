@@ -20,18 +20,21 @@ class TransportChart
 
 
     public function build(): BarChart
-    {
+    {   
+        // Mengambil jumlah peminjaman kendaraan
         $data = Lending::select('transport_id', \DB::raw('count(*) as total'))
             ->groupBy('transport_id')
             ->get();
     
         $transportIds = $data->pluck('transport_id')->toArray();
         $counts = $data->pluck('total')->toArray();
-    
+        
+        // Mengambil nama kendaraan berdasarkan id kendaraan
         $transportNames = Transportation::whereIn('id', $transportIds)
             ->pluck('name', 'id')
             ->toArray();
-    
+        
+        // Membuat label untuk sumbu X
         $labels = [];
         foreach ($transportIds as $id) {
             $labels[] = $transportNames[$id];
@@ -47,11 +50,14 @@ class TransportChart
 
 
     public function fuel(): BarChart
-    {
+    {   
+        // Mengambil data kendaraan & pemakaian bensin
         $data = Transportation::select('name', 'fuel')
             ->get();
 
+        // Nama kendaraan
         $labels = $data->pluck('name')->toArray();
+        // Pemakaian bensin
         $fuelUsages = $data->pluck('fuel')->toArray();
 
         return $this->chart->BarChart()

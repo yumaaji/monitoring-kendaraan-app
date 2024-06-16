@@ -16,6 +16,8 @@ class LendingExport implements FromCollection, WithHeadings, WithMapping, WithSt
     /**
      * @return \Illuminate\Support\Collection
      */
+    // Mengambil data di model Lending beserta relasinya
+    // Dan dijadikan ke dalam bentuk collection
     public function collection()
     {
         return Lending::with('company', 'transport', 'driver', 'supervisor')->get();
@@ -24,6 +26,7 @@ class LendingExport implements FromCollection, WithHeadings, WithMapping, WithSt
     /**
      * @return array
      */
+    // Judul dari setiap kolom
     public function headings(): array
     {
         return [
@@ -45,7 +48,7 @@ class LendingExport implements FromCollection, WithHeadings, WithMapping, WithSt
      */
     public function map($lending): array
     {
-        // Map status field
+        // Mengubah nilai status (1, 2, 3) menjadi teks yang lebih deskriptif (Waiting, Disetujui, Ditolak).
         $status = '';
         switch ($lending->status) {
             case 1:
@@ -59,6 +62,7 @@ class LendingExport implements FromCollection, WithHeadings, WithMapping, WithSt
                 break;
         }
 
+        // Mengisi data di setiap kolom
         return [
             $lending->id,
             $lending->transport ? $lending->transport->name : '',
