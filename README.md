@@ -25,10 +25,10 @@ Aplikasi ini digunakan untuk memonitoring kendaraan di tambang, dengan pengguna 
 2. Buka terminal dan jalankan: composer update atau composer install
 3. Ubah nama file `.env.example.copy` menjadi `.env`:
 4. Konfigurasi/buat database di MySQL dan update file `.env` dengan nama database Anda.
-5. Jalankan perintah berikut untuk menghasilkan key aplikasi dan membersihkan konfigurasi cache: php artisan key:generate & php artisan config:clear
-6. Jalankan migrasi dan seeding database untuk membuat tabel dan memasukkan data user default: php artisan migrate:fresh --seed. 
-7. Jalankan server aplikasi: php artisan serve
-8. Buka browser dan ketik: http://localhost:8000
+5. Jalankan perintah berikut untuk menghasilkan key aplikasi dan membersihkan konfigurasi cache: `php artisan key:generate` & `php artisan config:clear`
+6. Jalankan migrasi dan seeding database untuk membuat tabel dan memasukkan data user default: php artisan `migrate:fresh --seed`. 
+7. Jalankan server aplikasi: `php artisan serve`
+8. Buka browser dan ketik: `http://localhost:8000`
 
 ### Login sebagai Admin
 
